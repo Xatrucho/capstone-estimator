@@ -6,8 +6,8 @@ export default function Home() {
         <div className="home-wrapper">
             <h1>whats going on Car Enthusiasts</h1>
             <div className="home-buttons-wrapper">
-                <Link to="/bye">Make an appointment</Link>
-                <Link to="/bye">FREE ESTIMATES</Link>
+                <Link to="/estimates">Make an appointment</Link>
+                <Link to="/estimates">FREE ESTIMATES</Link>
             </div>
         </div>
     )
