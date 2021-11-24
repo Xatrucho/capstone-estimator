@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Switch, Route } from "react-router-dom"
 
+import Nav from "./nav"
 import Home from './pages/home'
 import Estimates from './pages/estimates'
 import AddEstimate from './pages/add-estimate'
