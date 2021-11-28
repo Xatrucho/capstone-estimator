@@ -1,33 +1,43 @@
-import React, { Component } from 'react'
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
-export default class Estimates extends Component {
-    constructor(props) {
-        super(props)
 
-        this.state = {
-            estimates: [],
-            loading: true,
-            error: false
-        }
-    }
+export default function Estimates() {
+    const [allEstimates, getAllEstimates] = useState([]);
+       
+    // componentDidMount() {
+    //         fetch('127.0.0.1:3000/estimates/get')
+    //         .then(function (res) {
+    //         return res.json();
+    //         })
+    //         .then(function (data) {
+    //             console.log(data)
+    //             this.setState({
+    //             estimates: data,
+    //             loading: false
+    //     });
+    // })
 
-    componentDidMount() {
-        fetch("")
-        .then(res => res.json())
-        .then(data => {
-            this.setState({
-                estimates: data,
-                loading: false
-            })
+
+    const getAllEstimates = () => {
+        axios.get("localhost:3000/estimates")
+        .then(res => {
+            setAllEstimates(res.data)
         })
         .catch(error => {
-            console.log("Error retrieving estimate", error)
-            this.setState({
-                error: true,
-                loading: false
-            })
-        })
+            console.log('An Error has occured while fetching your Estimates', error);
+        });
     }
+    
+        
+    //     .catch(error => {
+    //         console.log("Error retrieving estimate", error)
+    //         this.setState({
+    //             error: true,
+    //             loading: false
+    //         })
+    //     })
+    // }
 
     renderEstimates() {
         const estimatesHtml = this.state.estimates.map(estimate => (
