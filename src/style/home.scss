@@ -1,15 +1,24 @@
 .home-wrapper {
+    h1 {
+        display: flex;
+        padding-top: 25px;
+        color: hotpink;
+
+    }
+
     .home-buttons-wrapper {
         display: flex;
+        padding-top: 25px;
         justify-content: space-between;
+        
 
         a {
-            border: 1px solid black;
+            border: 2px solid greenyellow;
             border-radius: 5px;
             padding: 10px;
             width: 135px;
             text-align: center;
-            background-color: white;
+            background-color: rebeccapurple;
         }
     }
 }

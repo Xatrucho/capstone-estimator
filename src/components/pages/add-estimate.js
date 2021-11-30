@@ -16,6 +16,10 @@ export default class App extends Component {
         this.handleSubmit = this.handleSubmit.bind(this)
     }
 
+    handleChange(event) {
+        this.setState({ [event.target.name]: event.target.value })
+    }
+
     handleSubmit(event) {
         event.preventDefault()
 
@@ -24,7 +28,7 @@ export default class App extends Component {
             error: false
         })
 
-        fetch("", { 
+        fetch("http://localhost:5000/add-estimate", { 
             method: "POST",
             headers: { "content-type": "application/json"},
             body: JSON.stringify({
@@ -36,7 +40,7 @@ export default class App extends Component {
         })
         .then(res => res.json())
         .then(data => {
-            if (data.id) {
+            if (data) {
                 this.props.history.push("/estimates")
             }
         })
