@@ -15,6 +15,13 @@ body {
     overflow-x: hidden;
     font-weight: normal;
 
+    background-image: url(../components/images/retrowave-car.png);
+    background-repeat: repeat;
+    background-position: center;
+    background-size: cover;
+
+    
+
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
@@ -22,9 +29,11 @@ body {
 }
 
 .app {
-    margin-top: 2rem;
+    margin-top: 0;
     display: grid;
     justify-items: center;
+    height: 1000px;
+    margin-bottom: 0;
 }
 
 @import "./home.scss";
