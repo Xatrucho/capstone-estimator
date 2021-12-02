@@ -26,7 +26,7 @@ export default function Estimates() {
     }
 
     // const handleDeleteClick = () => {
-
+    // EXTRA CODE
     //     axios.delete(`http://127.0.0.1:5000/estimate/delete`)
     //     .then(res => {
     //         setAllEstimatesall.filter(estimate => {
