@@ -3,6 +3,7 @@ import axios from 'axios';
 
 
 
+
 export default function Estimates() {
     const [allEstimates, setAllEstimates] = useState([]);
    
@@ -14,7 +15,7 @@ export default function Estimates() {
 
 
     const getAllEstimates = () => {
-        axios.get("http://localhost:5000/estimates")
+        axios.get("http://localhost:3000/estimates")
         .then(res => {
             console.log(res)
             setAllEstimates(res.data)
@@ -44,16 +45,29 @@ export default function Estimates() {
                 <h3>{estimate.make}</h3>
                 <h3>{estimate.model}</h3>
                 <h3>{estimate.condition}</h3>
+                {/* <button className="del-btn" onClick={(id) => props.handleDeleteClick(id)}>delete</button> */}
             </div>
+
             
         ))
 
         return estimatesHtml
     }
 
-    return <div className="estimate-page-wrapper">{estimates()}</div>
+
+    return <div className="estimate-page-wrapper">{estimates()}
+        <div className="header"> 
+            <h1>SwordFish Customs</h1>
+        </div>
+    </div>
 }
-<div
-className="header">
-    Swordfish Customs
-</div>
+
+
+// return(
+//     <div Parent>
+//         <div Child 1>
+//         </div>
+//         <div Child 2>
+//         </div>
+//     </div>
+//     )

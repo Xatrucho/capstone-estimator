@@ -1,14 +1,25 @@
 .estimate-page-wrapper {
     width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
     margin-left: 30px;
     font-family: 'Yellowtail', cursive;
+
+    .header {
+        // margin: 40px;
+
+        h1 {
+            color: red;
+            ;
+        }
+
+    
+}   
 }
 
     .estimate-wrapper    {
-        margin-top: 22px;
+        margin-top: 20px;
         width: 50%;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -21,15 +32,16 @@
         padding: 10px;
         box-shadow: 2px 2px 2px red;
 
-      
 
         h3 {
             font-family: 'Yellowtail', cursive;
             font-size: 19px;
             text-shadow: 2px 2px 2px rgb(40, 113, 248);
 
-
+           
         }
+
+       
     
         // .estimate-wrapper {
         //     width: 100%;
@@ -55,6 +67,12 @@
         flex-direction: column-reverse;
         margin: 0;
         margin-left: -10px;
+
+        .header {
+            h1 {
+                margin-left: 50px;
+            }
+        }
   
         .estimate-wrapper {
             width: 40vw;

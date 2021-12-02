@@ -29,7 +29,7 @@ export default class App extends Component {
             error: false
         })
 
-        fetch("http://localhost:5000/add-estimate", { 
+        fetch("https:/localhost:5000/add-estimate", { 
             method: "POST",
             headers: { "content-type": "application/json"},
             body: JSON.stringify({
