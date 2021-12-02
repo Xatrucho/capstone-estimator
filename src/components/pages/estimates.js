@@ -15,7 +15,7 @@ export default function Estimates() {
 
 
     const getAllEstimates = () => {
-        axios.get("http://localhost:3000/estimates")
+        axios.get("https://mepv-capstone-back-end.herokuapp.com/estimates")
         .then(res => {
             console.log(res)
             setAllEstimates(res.data)
