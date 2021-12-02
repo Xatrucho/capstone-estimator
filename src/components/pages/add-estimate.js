@@ -58,7 +58,13 @@ export default class App extends Component {
     render() {
         return (
             <div className="add-estimate-wrapper">
-                <h2>Add Estimate</h2>
+
+                    <h1>SwordFish Customs</h1>
+                
+                    <h2>
+                        Add Estimate
+                    </h2>
+             
 
                 <form onSubmit={this.handleSubmit}>
                     <input 
@@ -93,7 +99,7 @@ export default class App extends Component {
                         onChange={this.handleChange}
                     />
 
-                    <button type="submit" disabled={this.state.loading}>Add Estimate</button>
+                    <button type="submit" disabled={this.state.loading}>SUBMIT</button>
                 </form>
 
                 {this.state.loading ? <div className="loading">Submitting Estimate...</div> : null}

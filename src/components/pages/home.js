@@ -4,11 +4,24 @@ import { Link } from "react-router-dom"
 export default function Home() {
     return (
         <div className="home-wrapper">
-            <div>
-                <h1>Welcome to SwordFish Customs</h1>
+
+            {/* <div className="image-wrapper">
+                <img src=""alt="car">
+            </div> */}
+
+                <div>
+                    <h1 id='header'>Welcome to SwordFish Customs</h1>
+                </div>
+
+            <div className="header">
+
             </div>
 
-            <div className="home-buttons-wrapper">
+            <p> This site is under construction 
+            but you can still add an estimate.
+             This site will have links to other companies.  Please come back soon.</p>
+
+            {/* <div className="home-buttons-wrapper">
                 <Link exact to="/estimates">
                     Make an appointment.
                 </Link>
@@ -19,7 +32,7 @@ export default function Home() {
                 <Link to="/estimates">
                     About us
                 </Link>
-            </div>
+            </div> */}
 
         </div>
        

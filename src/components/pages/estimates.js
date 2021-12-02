@@ -5,6 +5,8 @@ import axios from 'axios';
 
 export default function Estimates() {
     const [allEstimates, setAllEstimates] = useState([]);
+   
+
 
     useEffect(() => {
         getAllEstimates();
@@ -22,6 +24,19 @@ export default function Estimates() {
         });
     }
 
+    // const handleDeleteClick = () => {
+
+    //     axios.delete(`http://127.0.0.1:5000/estimate/delete`)
+    //     .then(res => {
+    //         setAllEstimatesall.filter(estimate => {
+    //             return estimate.id !== id;
+    //         }))
+    //     })
+    //     .catch(error => {
+    //         console.log('An error has occured while trying to delete your book.', error);
+    //     })
+    // }
+
    const estimates = () => {
         const estimatesHtml = allEstimates.map(estimate => (
             <div className="estimate-wrapper" key={estimate}>
@@ -30,6 +45,7 @@ export default function Estimates() {
                 <h3>{estimate.model}</h3>
                 <h3>{estimate.condition}</h3>
             </div>
+            
         ))
 
         return estimatesHtml
@@ -37,3 +53,7 @@ export default function Estimates() {
 
     return <div className="estimate-page-wrapper">{estimates()}</div>
 }
+<div
+className="header">
+    Swordfish Customs
+</div>
